@@ -19,7 +19,7 @@ public class SpringRedisApplication {
     @Bean
     RedisTemplate<String, Student> redisTemplate() {
         RedisTemplate<String, Student> redisTemplate =
-            new RedisTemplate<String, Student>();
+            new RedisTemplate();
         redisTemplate.setConnectionFactory(jedisConnectionFactory());
         return null;
     }
