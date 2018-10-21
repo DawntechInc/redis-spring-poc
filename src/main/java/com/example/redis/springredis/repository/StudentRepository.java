@@ -1,4 +1,4 @@
-package com.example.redis.springredis.resource;
+package com.example.redis.springredis.repository;
 
 import com.example.redis.springredis.model.Student;
 
