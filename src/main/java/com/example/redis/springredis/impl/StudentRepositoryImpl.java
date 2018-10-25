@@ -47,6 +47,11 @@ public class StudentRepositoryImpl implements StudentRepository {
 
     @Override
     public Integer getNumberOfCoursesByMatriculationNumber(Long matriculationNumber) {
-        return findByMatriculationNumber(Long matriculationNumber).getNumberOfCourses();
+        return findByMatriculationNumber(matriculationNumber).getNumberOfCourses();
+    }
+
+    @Override
+    public String getNameByMatriculationNumber(Long matriculationNumber) {
+        return findByMatriculationNumber(matriculationNumber).getName();
     }
 }

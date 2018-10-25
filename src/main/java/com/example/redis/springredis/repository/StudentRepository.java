@@ -17,4 +17,6 @@ public interface StudentRepository {
     void save(Student student);
 
     Integer getNumberOfCoursesByMatriculationNumber(Long matriculationNumber);
+
+    String getNameByMatriculationNumber(Long matriculationNumber);
 }
