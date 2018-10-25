@@ -21,7 +21,8 @@ public class StudentResource {
     @GetMapping("/editName/{matriculationNumber}/{name}/")
     public Student editName(@PathVariable("matriculationNumber") final Long matriculationNumber,
                             @PathVariable("name") final String name) {
-        studentRepository.save(new Student(matriculationNumber, name, 5)); //TODO: GET N_COURSES
+        Integer numberOfCoursesRepo =  studentRepository.getNumberOfCoursesByMatriculationNumber(matriculationNumber);
+        studentRepository.save(new Student(matriculationNumber, name, numberOfCoursesRepo));
         return studentRepository.findByMatriculationNumber(matriculationNumber);
     }
 

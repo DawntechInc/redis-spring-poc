@@ -15,4 +15,6 @@ public interface StudentRepository {
     void delete(Long matriculationNumber);
 
     void save(Student student);
+
+    Integer getNumberOfCoursesByMatriculationNumber(Long matriculationNumber);
 }

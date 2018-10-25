@@ -1,6 +1,7 @@
 package com.example.redis.springredis.model;
 
 import java.io.Serializable;
+
 public class Student implements Serializable {
 
     private Long matriculationNumber;

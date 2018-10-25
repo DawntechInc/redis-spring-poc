@@ -44,4 +44,9 @@ public class StudentRepositoryImpl implements StudentRepository {
         // key: matriculationNumber, value: object student
         hashOperations.put("STUDENT", student.getMatriculationNumber(), student);
     }
+
+    @Override
+    public Integer getNumberOfCoursesByMatriculationNumber(Long matriculationNumber) {
+        return findByMatriculationNumber(Long matriculationNumber).getNumberOfCourses();
+    }
 }
